@@ -1,7 +1,18 @@
-<h1> Pictures </h1>
+<h1> Most recent pictures </h1>
 <%= link_to("New Picture", "/pictures/new") %>
 
-<% @pictures.each do |picture| %>
+<div class="2018">
+<h1> 2018, <%= @twenty_eighteen.count %> photos </h1>
+  <% @twenty_eighteen.each do |picture| %>
   <p><%= picture.title%>, <%= picture.artist %></p>
   <%= link_to(image_tag(picture.url), "/pictures/#{picture.id}" ) %>
-<% end%>
+  <% end%>
+</div>
+
+<div class="2017">
+  <h1> 2017, <%= @twenty_seventeen.count %>, photos </h1>
+  <% @twenty_seventeen.each do |picture| %>
+  <p><%= picture.title %>, <%= picture.artist %> </p>
+  <%= link_to(image_tag(picture.url), "/pictures/#{picture.id}") %>
+  <% end %>
+</div>
