@@ -1,4 +1,8 @@
 class Picture < ActiveRecord::Base
+  # validates artist:, presence: true
+  # validates url:, presence: true
+  # validates_length_of :title, :maximum => 20, :minimum => 3
+
   def self.newest_first
     Picture.order("created_at DESC")
   end
