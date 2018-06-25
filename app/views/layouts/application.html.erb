@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Shrikhand" rel="stylesheet">
   <title>Photogur</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
@@ -25,7 +26,11 @@
       <% end %>
   </div>
 
-<%= yield %>
+  <%= link_to(root_path) do %>
+  <h1> PHOTOGUR </h1>
+  <% end %>
+
+  <%= yield %>
 
 </body>
 </html>

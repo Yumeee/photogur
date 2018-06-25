@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: 'Shrikhand', cursive;
+}
+
+body h1 {
+  text-align: center;
+  text-decoration: none;
+}
+
+.photos {
+  display: flex;
+  width: 250px;
+}
+
+.user_info p {
+  text-decoration: none;
+}
