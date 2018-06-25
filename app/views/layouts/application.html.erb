@@ -26,10 +26,17 @@
       <% end %>
   </div>
 
+
+
   <%= link_to(root_path) do %>
   <h1> PHOTOGUR </h1>
   <% end %>
 
+  <div class="flash">
+    <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+    <% end -%>
+  </div>
   <%= yield %>
 
 </body>

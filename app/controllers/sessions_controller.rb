@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to pictures_url, notice: "Logged in!"
     else
+      flash[:alert] = "Your e-mail and/or password is incorrect."
       render :new
     end
   end
